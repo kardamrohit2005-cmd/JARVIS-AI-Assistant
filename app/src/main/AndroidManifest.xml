@@ -4,6 +4,16 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Android 11+ में Voice Recognition और बोलने (TTS) के लिए यह बहुत ज़रूरी है -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <intent>
+            <action android:name="android.speech.tts.TextToSpeech.Engine.ACTION_CHECK_TTS_DATA" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:label="JARVIS Assistant"
